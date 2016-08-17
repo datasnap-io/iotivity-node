@@ -80,7 +80,7 @@ if test "x${DO_BUILD}x" = "xtruex"; then
 			cd extlibs/tinycbor/tinycbor
 			git checkout dbc0129400f22087d4be3396cc44ea922d2f07f8
 			cd -
-			scons $SCONS_FLAGS liboctbstack libconnectivity_abstraction libcoap c_common libocsrm routingmanager || { cat config.log; exit 1; }
+			scons $SCONS_FLAGS TARGET_ARCH=arm liboctbstack libconnectivity_abstraction libcoap c_common libocsrm routingmanager || { cat config.log; exit 1; }
 
 	cd ../../ || exit 1
 else
